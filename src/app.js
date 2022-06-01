@@ -6,6 +6,8 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  var suit = math.round(math.random() * 4);
+  var card = math.round(math.random() * 12);
+  console.log(suit);
+  console.log(card);
 };
