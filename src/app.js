@@ -5,9 +5,12 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  var suit = math.round(math.random() * 4);
-  var card = math.round(math.random() * 12);
-  console.log(suit);
-  console.log(card);
+window.onload = () => {
+  let RandomSuit = () => {
+    let suit = ["diamond", "spade", "heart", "club"];
+    let suitIndex = Math.floor(Math.random() * 4);
+    console.log(suit[suitIndex]);
+    return suit[suitIndex];
+  };
+  document.querySelector(".top-suit").innerHTML = RandomSuit();
 };
