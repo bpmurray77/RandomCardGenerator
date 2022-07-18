@@ -7,7 +7,12 @@ import "./assets/img/4geeks.ico";
 
 window.onload = () => {
   let RandomSuit = () => {
-    let suit = ["diamond", "spade", "heart", "club"];
+    let suit = [
+      "<img src='https://upload.wikimedia.org/wikipedia/en/thumb/1/1f/Card_diamond.svg/743px-Card_diamond.svg.png' width='55'>",
+      "<img src='https://upload.wikimedia.org/wikipedia/commons/e/e7/Spades.svg' width='55'>",
+      "<img src='https://upload.wikimedia.org/wikipedia/commons/a/a0/Naipe_copas.png' width='55'>",
+      "<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/SuitClubs.svg/800px-SuitClubs.svg.png' width='55'>"
+    ];
     let suitIndex = Math.floor(Math.random() * 4);
     console.log(suit[suitIndex]);
     return suit[suitIndex];
@@ -33,5 +38,5 @@ window.onload = () => {
     return card[cardIndex];
   };
   document.querySelector(".top-suit").innerHTML = RandomSuit();
-  document.querySelector(".card").innerHTML = RandomCard();
+  document.querySelector(".face").innerHTML = RandomCard();
 };
